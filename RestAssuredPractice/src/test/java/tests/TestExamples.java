@@ -1,22 +1,22 @@
 package tests;
 
 import org.testng.annotations.Test;
-import io.restassured.RestAssured;
+
+import static io.restassured.RestAssured.*;
 import io.restassured.response.Response;
 import static org.testng.Assert.assertEquals;
+import static org.hamcrest.Matchers.*;
 
 public class TestExamples {
 
 	@Test
 	public void testA() {
-		RestAssured.useRelaxedHTTPSValidation();
+		useRelaxedHTTPSValidation();
 
-		// Add your API key here
 		String apiKey = "reqres-free-v1";
 
-		Response response = RestAssured
-				.given()
-				.header("x-api-key", apiKey) // Use the correct header name provided by reqres.in
+		Response response = given()
+				.header("x-api-key", apiKey)
 				.get("https://reqres.in/api/users?page=2");
 
 		System.out.println(response.getStatusCode());
@@ -26,9 +26,25 @@ public class TestExamples {
 		System.out.println(response.getStatusLine());
 		System.out.println(response.getHeader("content-type"));
 
-		
-
-		// Inside your testA method, after the request:
 		assertEquals(response.getStatusCode(), 200, "Expected HTTP 200 OK");
 	}
+
+	@Test 
+	public void testB() {
+
+		baseURI = "https://reqres.in/api";
+		useRelaxedHTTPSValidation();
+
+		String apiKey = "reqres-free-v1";
+
+		given()
+		.header("x-api-key", apiKey)
+		.when()
+		.get("/users?page=2")
+		.then()
+		.statusCode(200)
+		.body("data.id[1]", equalTo(8)); // BDD-style assertions only
+	}
+	
+	
 }
