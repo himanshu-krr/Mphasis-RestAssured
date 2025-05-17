@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-16T19:31:46 IST" name="Default suite" finished-at="2025-05-16T19:31:49 IST" duration-ms="2301">
+  <suite started-at="2025-05-17T02:14:02 IST" name="Default suite" finished-at="2025-05-17T02:14:07 IST" duration-ms="5442">
     <groups>
     </groups>
-    <test started-at="2025-05-16T19:31:46 IST" name="Default test" finished-at="2025-05-16T19:31:49 IST" duration-ms="2301">
-      <class name="tests.GetAndPostExamples">
-        <test-method signature="testPost()[pri:0, instance:tests.GetAndPostExamples@48aca48b]" started-at="2025-05-16T19:31:46 IST" name="testPost" finished-at="2025-05-16T19:31:49 IST" duration-ms="2246" status="PASS">
+    <test started-at="2025-05-17T02:14:02 IST" name="Default test" finished-at="2025-05-17T02:14:07 IST" duration-ms="5442">
+      <class name="tests.NonBDDStyle">
+        <test-method signature="testDelete()[pri:0, instance:tests.NonBDDStyle@9597028]" started-at="2025-05-17T02:14:02 IST" name="testDelete" finished-at="2025-05-17T02:14:06 IST" duration-ms="4269" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPost -->
-      </class> <!-- tests.GetAndPostExamples -->
+        </test-method> <!-- testDelete -->
+        <test-method signature="testPatch()[pri:0, instance:tests.NonBDDStyle@9597028]" started-at="2025-05-17T02:14:06 IST" name="testPatch" finished-at="2025-05-17T02:14:07 IST" duration-ms="623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPatch -->
+        <test-method signature="testPut()[pri:0, instance:tests.NonBDDStyle@9597028]" started-at="2025-05-17T02:14:07 IST" name="testPut" finished-at="2025-05-17T02:14:07 IST" duration-ms="424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPut -->
+      </class> <!-- tests.NonBDDStyle -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

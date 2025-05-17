@@ -36,7 +36,7 @@ public class GetAndPostExamples {
 		 request.put("name", "Himanshu");
 		 request.put("job", "Tester");
 		 
-		 System.out.println(request.toJSONString());
+//		 System.out.println(request.toJSONString());
 		 
 		 baseURI = "https://reqres.in/api";
 
